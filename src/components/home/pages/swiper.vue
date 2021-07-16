@@ -10,22 +10,10 @@
 
 <script>
 export default{
+    props:['swiperList'],
     data(){
         return {
-            swiperList:[
-                {
-                    id:"01",
-                    imgUrl:require("@/assets/img/head-swiper01.jpg")
-                },
-                {
-                    id:"02",
-                    imgUrl:require("@/assets/img/head-swiper02.jpg")
-                },
-                {
-                    id:"03",
-                    imgUrl:require("@/assets/img/head-swiper03.jpg")
-                }
-            ],
+            
             swiperOptions:{
                 pagination: {
                     el: ".swiper-pagination",

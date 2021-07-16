@@ -15,6 +15,10 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 // import style (<= Swiper 5.x)
 import 'swiper/css/swiper.css'
 
+//axios
+import axios from 'axios'
+Vue.prototype.$http =axios;
+
 
 Vue.use(VueAwesomeSwiper)
 

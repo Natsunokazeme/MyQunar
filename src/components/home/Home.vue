@@ -1,10 +1,11 @@
 <template>
     <div class="background">
-        <home-header/>
-        <home-swiper/>
-        <home-icons/>
-        <home-location/>
-        <home-activity/>
+        <home-header></home-header>
+        <home-swiper :swiperList='swiperList'></home-swiper>
+        <home-icons  :iconList='iconList'></home-icons>
+        <home-location></home-location>
+        <home-activity></home-activity>
+        <home-hot  :hotList='hotList'></home-hot>
     </div>
 </template>
 
@@ -14,6 +15,7 @@ import HomeSwiper from './pages/swiper.vue'
 import HomeIcons from './pages/icons.vue'
 import HomeLocation from './pages/location.vue'
 import HomeActivity from './pages/activity.vue'
+import HomeHot from './pages/hot.vue'
 
 export default{
     components:{
@@ -21,7 +23,26 @@ export default{
         HomeSwiper,
         HomeIcons,
         HomeLocation,
-        HomeActivity
+        HomeActivity,
+        HomeHot
+    },
+    data(){
+        return{
+            swiperList:[],
+            iconList:[],
+            hotList:[]
+        }
+    },
+    //从后端获取数据
+    mounted(){
+        this.$http.get("http://localhost:8080/static/mock/dataHome.json")
+        .then((res)=>{
+            const data=res.data.data[1];
+            this.swiperList = data.swiperList;
+            this.iconList = data.iconList;
+            this.hotList = data.hotList;
+        });
+
     }
 }
 </script>

@@ -16,62 +16,11 @@
 
 <script>
 export default{
+    props:['iconList'],
     data(){
         return{
-            swiperOptions:{},
-            iconList:[
-                {
-                    id:"01",
-                    imgUrl:"https://s.qunarzz.com/homenode/images/touchheader/hotel.png",
-                    tittle:"酒店"
-                },
-                {
-                    id:"02",
-                    imgUrl:"	https://s.qunarzz.com/homenode/images/touchheader/flight.png",
-                    tittle:"飞机"
-                },
-                {
-                    id:"03",
-                    imgUrl:"https://s.qunarzz.com/homenode/images/touchheader/train.png",
-                    tittle:"火车"
-                },
-                {
-                    id:"04",
-                    imgUrl:"	https://s.qunarzz.com/homenode/images/touchheader/package.png",
-                    tittle:"度假"
-                },
-                {
-                    id:"05",
-                    imgUrl:"https://s.qunarzz.com/homenode/images/touchheader/piao.png",
-                    tittle:"景点门票"
-                },
-                {
-                    id:"06",
-                    imgUrl:"https://s.qunarzz.com/homenode/images/touchheader/piao.png",
-                    tittle:"景点门票"
-                },
-                {
-                    id:"07",
-                    imgUrl:"https://s.qunarzz.com/homenode/images/touchheader/piao.png",
-                    tittle:"景点门票"
-                },
-                {
-                    id:"08",
-                    imgUrl:"https://s.qunarzz.com/homenode/images/touchheader/piao.png",
-                    tittle:"景点门票"
-                },
-                {
-                    id:"09",
-                    imgUrl:"https://s.qunarzz.com/homenode/images/touchheader/piao.png",
-                    tittle:"景点门票"
-                },
-                {
-                    id:"10",
-                    imgUrl:"https://s.qunarzz.com/homenode/images/touchheader/piao.png",
-                    tittle:"景点门票"
-                }
-
-            ]
+            swiperOptions:{}
+            
         }
     },
     computed:{
