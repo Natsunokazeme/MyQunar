@@ -30,19 +30,31 @@ export default{
         return{
             swiperList:[],
             iconList:[],
-            hotList:[]
+            hotList:[],
+            changecity:''
+        }
+    },
+    methods:{
+        getHttp(){
+            this.changecity=this.city;
+            this.$http.get("/api/dataHome.json")
+            .then((res)=>{
+                const data=res.data.data[1];
+                this.swiperList = data.swiperList;
+                this.iconList = data.iconList;
+                this.hotList = data.hotList;
+            });
         }
     },
     //从后端获取数据
     mounted(){
-        this.$http.get("http://localhost:8080/static/mock/dataHome.json")
-        .then((res)=>{
-            const data=res.data.data[1];
-            this.swiperList = data.swiperList;
-            this.iconList = data.iconList;
-            this.hotList = data.hotList;
-        });
-
+        this.getHttp();
+    },
+    activated(){
+        if(this.changecity!=this.city){
+            this.getHttp();
+            this.changecity=this.city;
+        }
     }
 }
 </script>

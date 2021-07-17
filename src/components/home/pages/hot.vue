@@ -2,9 +2,8 @@
     <div class="hot">
         <div class="hot-top">
             <span class="hot-top-head">特惠度假</span><br>
-            <button >当季热门季度</button>
-            <button >今日特惠度假</button>
-
+                    <button @click="cur=true" :class="{active:cur==true}">当季热门季度</button>
+                    <button @click="cur=false" :class="{active:cur==false}">今日特惠度假</button>
         </div>
         <div class="hot-list">
             <ul>
@@ -22,12 +21,16 @@
 </template>
 
 <script>
+
 export default {
     props:['hotList'],
     data(){
         return{
-            
+            cur:true
         }
+    },
+    methods:{
+        
     }
 }
 </script>
@@ -53,17 +56,22 @@ export default {
     width: 2.2rem;
     height: .6rem;
     background: #fff;
-    border:1px solid #ccc;
+    border:1px solid #17c0c8;
+    color: #17c0c8;
     border-radius: 5px;
     font:bolder;
     font-size: .3rem;
     line-height: .6rem;
     text-align:center;
 }
-.hot-top button:focus{
+.hot-top>>>.active{
     background: #17c0c8;
     color: #fff;
 }
+.tab li{
+    display: inline-block;
+}
+
 .hot-item{
     display: inline-block;
     width: 3.6rem;
@@ -103,4 +111,5 @@ export default {
     text-align:center;
     margin: 0 auto;
 }
+
 </style>

@@ -8,15 +8,15 @@
             "swiperList": [
                 {
                     "id": "01",
-                    "imgUrl": "http://localhost:8080/static/img/head-swiper01.jpg"
+                    "imgUrl": "/api/img/head-swiper01.jpg"
                 },
                 {
                     "id": "02",
-                    "imgUrl": "http://localhost:8080/static/img/head-swiper02.jpg"
+                    "imgUrl": "/api/img/head-swiper02.jpg"
                 },
                 {
                     "id": "03",
-                    "imgUrl": "http://localhost:8080/static/img/head-swiper03.jpg"
+                    "imgUrl": "/api/img/head-swiper03.jpg"
                 }
             ],
             "iconList": [
