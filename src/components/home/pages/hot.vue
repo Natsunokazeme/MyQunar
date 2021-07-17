@@ -5,8 +5,8 @@
                     <button @click="cur=true" :class="{active:cur==true}">当季热门季度</button>
                     <button @click="cur=false" :class="{active:cur==false}">今日特惠度假</button>
         </div>
-        <div class="hot-list">
-            <ul>
+        <div >
+            <ul class="hot-list">
                 <li  class="hot-item" v-for="item in hotList" :key="item.id">
                     <img :src="item.imgUrl">
                     <div>{{item.tittle}}</div>
@@ -72,9 +72,13 @@ export default {
     display: inline-block;
 }
 
+.hot-list{
+    width: 100%;
+    height: 100%;
+}
 .hot-item{
     display: inline-block;
-    width: 3.6rem;
+    width: 47.7%;
     height: 3.6rem;
     font-size: .3rem;
     margin: .1rem .1rem;
