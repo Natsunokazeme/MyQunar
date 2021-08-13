@@ -9,7 +9,8 @@
             <span class="iconfont">
                 &#xe600;
             </span>
-            输入城市/景点/游玩主题
+            <input class="search" v-model="value" placeholder="输入城市/景点/游玩主题">
+            
         </div>
         <div class="header-right">
             <router-link to="/city">
@@ -52,6 +53,13 @@ export default{
     color: #e4e7ea;
     line-height: .6rem;
     font-size: .3rem;
+}
+.search{
+    background-color: #FFF;
+    display: inline-block;
+    width: 80%;
+    font-size: .3rem;
+    border:0;
 }
 .header-right{
     font-size: .3rem;

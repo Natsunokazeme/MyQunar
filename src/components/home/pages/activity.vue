@@ -1,15 +1,11 @@
 
 <template>
-    <div class="activity border-top" >
-        <div class="activity-item border-right">
-            <span ><!-- 伪元素不可用在img等替换元素上-->
-            </span>
-                <img src="https://s.qunarzz.com/package_mobile/home-activity/freetrip-190212.png">
-            
-            
+    <div class="activity " >
+        <div class="activity-item ">
+            <img src="https://source.qunarzz.com/site/images/wns/20210809_qunar_homepage_dujia_a750x192_4.jpg">
         </div>
         <div class="activity-item">
-           <img src="https://s.qunarzz.com/package_mobile/home-activity/freetrip-190212.png">
+           <img src="https://source.qunarzz.com/site/images/wns/20210813_qunar_dujia_homepage_750_192_3.jpg">
         </div>
     </div>
 </template>
@@ -24,24 +20,24 @@ export default {
 .activity{
     margin-top: .2rem;
     display: flex;
-    position: relative;
     background-color: #fff;
 
 }
-.activity-item img{
-    height: 90%;
-    width: 90%;
-    margin:  auto;
 
-}
 .activity-item{
     font-size: .2rem;
     margin: 0 auto;
+    width: 50%;
     line-height: 1rem;
     height: 1.4rem;
     display: flex;
 }
+.activity-item img{
+    height: 100%;
+    width: 100%;
+    margin:  auto;
 
+}
 
 </style>
 

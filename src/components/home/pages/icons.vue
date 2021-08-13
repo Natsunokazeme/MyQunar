@@ -46,7 +46,7 @@ export default{
 .icons-item{
     width: 25%;
     height: 0;
-    padding-bottom: 25%;
+    padding-bottom: 20%;
     float: left;
 }
 .icons-item img{

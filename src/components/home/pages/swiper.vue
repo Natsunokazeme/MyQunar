@@ -41,4 +41,8 @@ export default{
     opacity: 1;
     background: #fff;
 }
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 25px;
+    width: 100%;
+}
 </style>
