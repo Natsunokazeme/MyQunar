@@ -1,6 +1,6 @@
 # myqunar
 
-> A Vue.js project
+>  一个用vue2模仿去哪儿的前端项目
 
 ## Build Setup
 
