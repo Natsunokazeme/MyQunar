@@ -26,6 +26,8 @@ Vue.use(VueAwesomeSwiper)
 import FastClick from 'fastclick'
 FastClick.attach(document.body);
 
+
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

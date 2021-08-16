@@ -38,8 +38,9 @@ export default {
     line-height: .88rem;
     color: #FFF;
     background: #17c0c8;
-    position: relative;
-   
+    position: fixed;
+    z-index:100;
+    top: 0;
 }
 .header-left{
     width :.4rem;
@@ -52,6 +53,7 @@ export default {
     margin: auto;
 }
 .head-bottom{
+    margin-top: .88rem;
     display: flex;
     background: #17c0c8;
     padding: 0 1rem;

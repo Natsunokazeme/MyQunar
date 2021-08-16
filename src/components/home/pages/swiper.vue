@@ -19,7 +19,11 @@ export default{
                     el: ".swiper-pagination",
                     clickable:true
                 },
-                loop:true
+                loop:true,
+                autoplay : {
+                    delay : 3000, 
+                    disableOnInteraction : false 
+                },
             }
         }
     }
