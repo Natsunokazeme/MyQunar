@@ -1,6 +1,7 @@
 # myqunar
 
-> A Vue.js project
+> 用vue2写的一个去哪儿前端项目，用到的插件有betterscroll、swiper、vue-router、babel、axios
+
 
 ## Build Setup
 
