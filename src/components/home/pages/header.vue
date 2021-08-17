@@ -14,7 +14,7 @@
         </div>
         <div class="header-right">
             <router-link to="/city">
-                上海
+                {{city}}
                 <span class="iconfont">
                     &#xe6bd;
                 </span>
@@ -24,8 +24,11 @@
 </template>
 
 <script>
+import {mapState} from 'Vuex'
 export default{
-
+    computed:{
+        ...mapState(['city'])
+    }
 }
 </script>
 <style >
@@ -45,6 +48,7 @@ export default{
 
 }
 .header-search{
+    padding-left: 10px;
     flex: 1;
     background-color: #FFF;
     height: .6rem;

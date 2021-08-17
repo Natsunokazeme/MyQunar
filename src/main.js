@@ -12,6 +12,8 @@ import  './assets/css/iconfont.css'
 
 //Swiper
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+Vue.use(VueAwesomeSwiper)
+
 // import style (<= Swiper 5.x)
 import 'swiper/css/swiper.css'
 
@@ -19,8 +21,9 @@ import 'swiper/css/swiper.css'
 import axios from 'axios'
 Vue.prototype.$http =axios;
 
+//vuex
+import store from './store'
 
-Vue.use(VueAwesomeSwiper)
 
 //js
 import FastClick from 'fastclick'
@@ -32,6 +35,7 @@ FastClick.attach(document.body);
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

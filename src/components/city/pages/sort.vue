@@ -6,7 +6,7 @@
             热门城市
             </div>
             <ul class="hot-cities">
-                <li v-for="item in hotcity" :key="item.id"
+                <li v-for="item in hotcity" :key="item.id" @click="changeCityName(item.name)"
                 >{{item.name}}</li>
             </ul>
             <!--chars-->
@@ -20,10 +20,10 @@
                 <li class="sort-details" v-for="(val,key,index) in cities" :key="index" :ref="key"
                 ><div>{{key}}</div>
                 <br>
-                <div class="citybg">
-                    <div class="char-city" v-for="item in val" :key="item.id"
-                    >{{item.name}}</div>
-                </div>
+                <ul class="citybg">
+                    <li class="char-city" v-for="item in val" :key="item.id"  @click="changeCityName(item.name)"
+                    >{{item.name}}</li>
+                </ul>
                     
                 </li>
                 
@@ -34,7 +34,7 @@
 </template>
 
 <script>
-
+import {mapMutations} from 'Vuex'
 import BetterScroll from 'better-scroll'
 
 export default {
@@ -63,7 +63,14 @@ export default {
                     this.scroll.refresh();
                 };
             })
-        }
+        },
+        changeCityName(cityName){
+            this.changeCity(cityName);
+            this.$router.push('/');
+        },
+        ...mapMutations(
+            ['changeCity']
+        )
     }
     
 
@@ -94,23 +101,25 @@ export default {
 }
 .hot-cities::before{
     content: "";
+    position: absolute;
     height: 100%;
     width: 33.3%;
     left: 33.3%;
-    border-left: 2px solid #ddd;
-    border-right: 2px solid #ddd;
-    position: absolute;
-
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    
     
 }
 .hot-cities li{
+    position: relative;
     float:left;
-    width: 33%;
+    width: 33.3%;
     font-size: .3rem;
     line-height: .9rem;
     text-align: center;
-    background: #fff;
-    border-bottom: 2px solid #ddd;
+    background: rgba(225,225,225,0.1);
+    border-bottom: 1px solid #ddd;
+
 }
 .sort-tittle{
     color: #212121;
@@ -137,36 +146,27 @@ export default {
 }
 .citybg{
     background: #fff;
+    float: left;
 }
 .char-city {
-    display: inline-block;
+    position: relative;
+    float: left;
     width: 25%;
     font-size: .3rem;
     line-height: .9rem;
     text-align: center;
-    background: #fff;
+    background: rgba(225,225,225,0.1);
     border-bottom:1px solid #ddd;
 }
-.char-city::before{
-    content: "";
-    height: .9rem;
-    width: 25%;
-    left: 25%;
-    border-left: 1px solid #ddd;
+
+
+.char-city::after{
+    content: " ";
+    height: 100%;
+    width: 100%;
+    left: 0;
     border-right: 1px solid #ddd;
     position: absolute;
-
-    
-}
-.char-city::after{
-    content: "";
-    height: .9rem;
-    width: 25%;
-    left: 75%;
-    border-left: 1px solid #ddd;
-    position: absolute;
-
-    
 }
 
 </style>
